@@ -55,7 +55,7 @@ module.exports.run = async (message, stdin, stdout) => {
           { name: "Server Name:", value: data.name, inline: true },
           { name: "Server IP:", value: data.connect, inline: true },
           {
-            name: "Current player count:",
+            name: "Players:",
             value: `${data.players.length} / ${data.maxplayers}`,
             inline: true,
           }
