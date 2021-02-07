@@ -13,6 +13,7 @@ module.exports.run = async (message, stdin, stdout) => {
   const stream = vmsq("hl2master.steampowered.com:27011", 0xff, {
     gamedir: "open_fortress",
     empty: 1,
+    password: 0,
   });
   const servers = [];
   const datalist = [];
