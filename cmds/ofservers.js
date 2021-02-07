@@ -53,7 +53,7 @@ module.exports.run = async (message, stdin, stdout) => {
       for (const data of datalist) {
         embed.addFields(
           { name: "Server Name:", value: data.name, inline: true },
-          { name: "Server IP:", value: data.connect, inline: true },
+          { name: "Server IP:", value: `steam://connect/${data.connect}`, inline: true },
           {
             name: "Players:",
             value: `${data.players.length} / ${data.maxplayers}`,
