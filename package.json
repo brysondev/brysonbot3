@@ -1,0 +1,27 @@
+{
+  "name": "brysonbot3",
+  "version": "1.0.0",
+  "description": "Brysonbot but even more modularity and working cross-server environments",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brysondev/brysonbot3.git"
+  },
+  "author": "brysondev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brysondev/brysonbot3/issues"
+  },
+  "homepage": "https://github.com/brysondev/brysonbot3#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "fs": "0.0.1-security",
+    "gamedig": "^2.0.25",
+    "quick.db": "^7.1.3",
+    "stream": "0.0.2",
+    "vmsq": "^2.1.0"
+  }
+}
