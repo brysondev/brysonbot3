@@ -13,7 +13,7 @@ module.exports.run = async (message, stdin, stdout) => {
   const stream = vmsq("hl2master.steampowered.com:27011", 0xff, {
     gamedir: "open_fortress",
     empty: 1,
-    password: 0,
+    full: 1,
   });
   const servers = [];
   const datalist = [];
@@ -52,15 +52,20 @@ module.exports.run = async (message, stdin, stdout) => {
 
     if (datalist.length !== 0) {
       for (const data of datalist) {
-        embed.addFields(
-          { name: "Server Name:", value: data.name, inline: true },
-          { name: "Server IP:", value: `steam://connect/${data.connect}`, inline: true },
-          {
-            name: "Players:",
-            value: `${data.players.length} / ${data.maxplayers}`,
-            inline: true,
-          }
-        );
+        if (data.password === false)
+          embed.addFields(
+            { name: "Server Name:", value: data.name, inline: true },
+            {
+              name: "Server IP:",
+              value: `steam://connect/${data.connect}`,
+              inline: true,
+            },
+            {
+              name: "Players:",
+              value: `${data.players.length} / ${data.maxplayers}`,
+              inline: true,
+            }
+          );
       }
       embed.setColor(3066993);
     } else {
