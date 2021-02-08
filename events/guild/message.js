@@ -12,7 +12,7 @@ module.exports = async (message) => {
   let f = message.mentions.users.first();
   if (f) {
     if (f.id == client.user.id)
-      message.reply(`Please use ${config.prefix}help`);
+      message.reply(`please use ${config.prefix}help for a list of commands`);
   }
   if (message.author.bot) return;
   if (!message.content.startsWith(config.prefix)) return;
